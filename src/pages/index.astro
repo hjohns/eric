@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
+
+const navItems = [
+  { slug: 'home', label: 'Home' },
+  { slug: 'the-book', label: 'The Book' },
+  { slug: 'videos', label: 'Videos' },
+  { slug: 'about', label: 'About' },
+] as const;
+
+const sections = await Promise.all(
+  navItems.map(async ({ slug, label }) => {
+    const entry = await getEntry('sections', slug);
+    const { Content } = await entry.render();
+
+    return {
+      slug,
+      label,
+      title: entry.data.title,
+      intro: entry.data.intro,
+      Content,
+    };
+  })
+);
+---
+
+<BaseLayout title="Creative Studio" description="A clean single-page layout powered by Astro, Tailwind CSS, and Markdown content.">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <div class="container-layout flex flex-wrap items-center justify-between gap-4 py-4">
+      <a href="#home" class="text-lg font-semibold tracking-tight text-brand hover:text-brand-dark">Creative Studio</a>
+      <nav>
+        <ul class="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-700">
+          {navItems.map((item) => (
+            <li><a class="rounded-md px-3 py-2 transition hover:bg-brand/10 hover:text-brand-dark" href={`#${item.slug}`}>{item.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    {sections.map(({ slug, title, intro, Content }) => (
+      <section id={slug} class="border-b border-slate-200 bg-white first:bg-slate-100/70">
+        <div class="container-layout py-16 sm:py-20">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand">{title}</p>
+            {intro && <p class="mt-3 text-lg text-slate-600">{intro}</p>}
+          </div>
+          <div class="section-content mx-auto mt-8 max-w-3xl text-left">
+            <Content />
+          </div>
+        </div>
+      </section>
+    ))}
+  </main>
+
+  <footer class="bg-slate-900 py-8 text-slate-200">
+    <div class="container-layout flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {new Date().getFullYear()} Creative Studio. Crafted with Astro & Tailwind CSS.</p>
+      <p class="text-slate-400">Update the layout in <code>src/pages/index.astro</code> and edit content in <code>src/content/sections</code>.</p>
+    </div>
+  </footer>
+</BaseLayout>
