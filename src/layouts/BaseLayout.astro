@@ -16,6 +16,15 @@ const { title = 'Creative Studio', description = 'A simple single-page site buil
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <title>{title}</title>
     <meta name='description' content={description} />
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-GKQFSJV48R'></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GKQFSJV48R');
+    </script>
   </head>
   <body>
     <div class='min-h-screen flex flex-col bg-slate-50'>
