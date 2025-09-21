@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Creative Studio', description = 'A simple single-page site built with Astro and Tailwind CSS.' } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>{title}</title>
+    <meta name='description' content={description} />
+  </head>
+  <body>
+    <div class='min-h-screen flex flex-col bg-slate-50'>
+      <slot />
+    </div>
+    <script>
+      const navLinks = Array.from(document.querySelectorAll('.section-nav .nav-link'));
+      if (navLinks.length) {
+        const targets = navLinks
+          .map((link) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return null;
+            const el = document.querySelector(href);
+            if (!el) return null;
+            return { link, el };
+          })
+          .filter(Boolean);
+
+        const setActive = (activeLink) => {
+          navLinks.forEach((link) => link.classList.toggle('is-active', link === activeLink));
+        };
+
+        const onScroll = () => {
+          const scrollPosition = window.scrollY + window.innerHeight * 0.3;
+          let current = targets[0];
+          for (const item of targets) {
+            const top = item.el.offsetTop;
+            if (top <= scrollPosition) {
+              current = item;
+            }
+          }
+          if (current) {
+            setActive(current.link);
+          }
+        };
+
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+      }
+    </script>
+  </body>
+</html>
