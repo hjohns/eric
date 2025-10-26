@@ -1,11 +1,9 @@
 ---
-title: "Support"
-intro: "Register your interest, share a lead, or get in touch about distribution and funding."
+title: "Keep in touch"
+intro: "If you would like to be kept informed about the book or to contact the auther, please register your interest below."
 ---
 
-## Get Involved
 
-We’re building partnerships to place the book in PNG schools, universities and libraries. If you’d like to invest, help with distribution, or simply stay informed, please add your details below.
 
 > Privacy note: Your details are used only for project updates and will not be shared.
 

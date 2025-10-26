@@ -27,12 +27,3 @@ Eric began drafting this history in 2006 while staying in close contact with Chr
 
 Their goal was to launch the book in time for PNG's 50th independence celebrations. Funding proposals were sent to publishers, businesses, embassies, and grant programs. Despite strong testimonials, the responses were mostly silent or negative. One bright moment came when the Australian High Commission in PNG considered supporting the project, but the request was ultimately declined because it did not originate from PNG government officials.
 
-## Self-Funded to Reach the Finish Line
-
-Undeterred, Chris personally financed professional editing, design, and a limited print run. Only 50 copies were produced at significant cost per copy, leaving a small number for Eric to share with academics, reviewers, and close supporters. These early readers are helping to build momentum for a broader release, yet there is still no stock available for sale.
-
-## Call for Support
-
-With the first edition complete, Eric and Chris are again seeking funding to place the book in PNG high schools, universities, and cultural institutions, and to make future printings affordable for readers in both PNG and Australia. If you'd like to help this foundational history reach the people it was written for, please get in touch.
-
-> "Naturally I consider myself very fortunate. I still find it hard to believe that Chris would do this for me, but he told me his faith in the book was such that he is honoured to be associated with it." — Eric Johns, 18 September 2025
