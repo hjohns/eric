@@ -1,6 +1,6 @@
 ---
 title: "Keep in touch"
-intro: "If you would like to be kept informed about the book or to contact the auther, please register your interest below."
+intro: "If you would like to be kept informed about the book or to contact the author, please register your interest below."
 ---
 
 
