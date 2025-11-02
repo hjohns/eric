@@ -34,11 +34,15 @@ intro: "A YouTube series sharing PNG history and short segments related to the b
     <p class="mt-2 text-sm text-slate-700">EPISODE 6: A Journey Through Papua New Guinea History</p>
   </div>
   <div class="mb-4">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/BPPQcr8hXPQ?si=placeholder" title="EPISODE 7: A Journey Through Papua New Guinea History" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/cKhkE1BL2XY?si=placeholder" title="EPISODE 7: A Journey Through Papua New Guinea History" frameborder="0" allowfullscreen></iframe>
     <p class="mt-2 text-sm text-slate-700">EPISODE 7: A Journey Through Papua New Guinea History</p>
   </div>
   <div class="mb-4">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/6IxJB1FUDc0?si=placeholder" title="EPISODE 8: A Journey Through Papua New Guinea History" frameborder="0" allowfullscreen></iframe>
     <p class="mt-2 text-sm text-slate-700">EPISODE 8: A Journey Through Papua New Guinea History</p>
+  </div>
+  <div class="mb-4">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/8oFfHjKtfc0?si=placeholder" title="EPISODE 9: A Journey Through Papua New Guinea History" frameborder="0" allowfullscreen></iframe>
+    <p class="mt-2 text-sm text-slate-700">EPISODE 9: A Journey Through Papua New Guinea History</p>
   </div>
 </div>
