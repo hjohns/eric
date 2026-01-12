@@ -43,3 +43,16 @@ Static assets are written to `dist/` and deployed via GitHub Actions to GitHub P
 ## Tech stack
 
 Built with [Astro](https://astro.build), [Tailwind CSS](https://tailwindcss.com), and [TypeScript](https://www.typescriptlang.org/). Continuous deployment uses GitHub Actions and GitHub Pages.
+
+
+## Channel JS script
+
+Get the contents of the channel in JSON format.
+
+```javascript
+console.log(JSON.stringify(Array.from(document.querySelectorAll('a#video-title-link')).map(v => ({ title: v.innerText.trim(), link: 'https://www.youtube.com' + v.getAttribute('href') })), null, 2));
+```
+
+```json
+
+```
